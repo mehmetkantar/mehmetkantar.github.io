@@ -566,6 +566,242 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 12px 24px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover,
+        .nav-tab.active {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Section Styles */
+        .section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-text {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .education-item {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .education-item h4 {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .education-item .school {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .education-item .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .gpa-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-purple), var(--accent-cyan));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 25px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 30px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-purple);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+        }
+
+        .timeline-item h4 {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item ul {
+            color: var(--text-secondary);
+            padding-left: 20px;
+        }
+
+        .timeline-item li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-category h4 {
+            color: var(--accent-purple);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 14px;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid var(--accent-purple);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        /* Contact Links */
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-link {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--glow-purple);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                margin-left: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -595,341 +831,487 @@
         </div>
     </header>
 
-    <!-- Category Filters -->
-    <div class="categories">
-        <button class="category-btn active" data-filter="all">All Projects</button>
-        <button class="category-btn" data-filter="robotics">🤖 Robotics</button>
-        <button class="category-btn" data-filter="ai">🧠 AI/ML</button>
-        <button class="category-btn" data-filter="games">🎮 Games</button>
-        <button class="category-btn" data-filter="simulation">⚡ Simulation</button>
-    </div>
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <a href="#about" class="nav-tab">About</a>
+        <a href="#experience" class="nav-tab">Experience</a>
+        <a href="#skills" class="nav-tab">Skills</a>
+        <a href="#projects" class="nav-tab active">Projects</a>
+    </nav>
 
-    <!-- Projects -->
-    <div class="projects-container">
-        <div class="projects-grid">
-
-            <!-- Project 1: Robot Arm -->
-            <div class="project-card" data-category="robotics" style="animation-delay: 0.1s;">
-                <div class="featured-badge">⭐ Featured</div>
-                <img src="https://img.youtube.com/vi/iX-ZMjMz9j0/maxresdefault.jpg" alt="4-DoF Robot Arm"
-                    class="card-image" onerror="this.src='screenshots/Start_screen.png'">
-                <div class="card-content">
-                    <span class="card-category cat-robotics">Robotics</span>
-                    <h3 class="card-title">Autonomous 4-DoF Robot Arm with Chassis</h3>
-                    <p class="card-description">Complete robotic system with inverse kinematics, computer vision, AI
-                        integration, and mobile chassis control via Raspberry Pi.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Raspberry Pi</span>
-                        <span class="tech-tag">Gemini AI</span>
-                        <span class="tech-tag">PyQt5</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Autonomous-and-Teleoperated-4-DoF-Robot-Arm-with-chassis"
-                            class="card-link link-github" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://youtu.be/iX-ZMjMz9j0" class="card-link link-demo" target="_blank">
-                            ▶ Watch Demo
-                        </a>
-                    </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a senior student at <strong>Koç University</strong> pursuing a double major in <strong>Mechanical
+                        Engineering</strong> and <strong>Computer Engineering</strong>. My passion lies at the
+                    intersection of robotics, AI, and software development.</p>
+                <p>With hands-on experience in ROS2, MuJoCo simulation, and machine learning, I've contributed to
+                    projects ranging from autonomous navigation systems to AI-powered legal tech platforms.</p>
+                <p>I'm a <strong>Vehbi Koç Honor Award</strong> recipient (5 semesters) with a GPA of
+                    <strong>3.86/4.00</strong>.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:mkantar21@ku.edu.tr" class="contact-link">📧 Email</a>
+                    <a href="https://www.linkedin.com/in/mehmet-kantar-b7bb0821b/" target="_blank"
+                        class="contact-link">💼 LinkedIn</a>
+                    <a href="https://github.com/mehmetkantar" target="_blank" class="contact-link">🔗 GitHub</a>
                 </div>
             </div>
-
-            <!-- Project 2: Blockris -->
-            <div class="project-card" data-category="games" style="animation-delay: 0.2s;">
-                <div class="featured-badge">🎮 Playable</div>
-                <img src="screenshots/Game_screen.png" alt="Blockris Game" class="card-image">
-                <div class="card-content">
-                    <span class="card-category cat-games">Games</span>
-                    <h3 class="card-title">Blockris - Modern Block Puzzle</h3>
-                    <p class="card-description">Modern Tetris-style puzzle game with Firebase leaderboards, combo
-                        system, haptic feedback, and mobile app support.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Capacitor</span>
-                        <span class="tech-tag">Vite</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Blockris" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
+            <div class="education-list">
+                <div class="education-item">
+                    <h4>Mechanical Engineering</h4>
+                    <div class="school">Koç University, College of Engineering</div>
+                    <div class="date">2021 – 2026</div>
                 </div>
+                <div class="education-item">
+                    <h4>Computer Engineering (Double Major)</h4>
+                    <div class="school">Koç University, College of Engineering</div>
+                    <div class="date">2022 – 2026</div>
+                </div>
+                <div class="gpa-badge">🎓 GPA: 3.86 / 4.00</div>
             </div>
-
-            <!-- Project 3: roKUe Roguelike Game -->
-            <div class="project-card" data-category="games" style="animation-delay: 0.25s;">
-                <div class="featured-badge">🎮 Team Project</div>
-                <img src="screenshots/roKUe_MainMenu.jpg" alt="roKUe Game" class="card-image">
-                <div class="card-content">
-                    <span class="card-category cat-games">Games</span>
-                    <h3 class="card-title">roKUe - Rogue-Like Dungeon Game</h3>
-                    <p class="card-description">A roguelike dungeon crawler with procedural generation, enchantments,
-                        monsters, and item collection system. Built as a team project.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">JavaFX</span>
-                        <span class="tech-tag">Maven</span>
-                        <span class="tech-tag">OOP</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/abdullahyildirim209/roKUe-game" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: MCP Agent Benchmark -->
-            <div class="project-card" data-category="ai" style="animation-delay: 0.3s;">
-                <div class="simulation-container">
-                    <canvas id="mcp-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-ai">AI/ML</span>
-                    <h3 class="card-title">MCP Agent Benchmark</h3>
-                    <p class="card-description">Production-grade AI web scraping tool with Firecrawl MCP, multi-model
-                        comparison, and Pydantic validation for enterprise use.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">OpenRouter</span>
-                        <span class="tech-tag">Pydantic</span>
-                        <span class="tech-tag">Firecrawl</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/mcp-agent-benchmark" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5: Hello Robot Stretch -->
-            <div class="project-card" data-category="robotics" style="animation-delay: 0.4s;">
-                <img src="screenshots/hello_robot_architecture.png" alt="Hello Robot Stretch" class="card-image"
-                    style="object-fit: cover;">
-                <div class="card-content">
-                    <span class="card-category cat-robotics">Robotics</span>
-                    <h3 class="card-title">Hello Robot Stretch Simulation</h3>
-                    <p class="card-description">Full simulation system with MuJoCo physics, ROS2 SLAM integration, and
-                        web-based teleoperation control.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">ROS2</span>
-                        <span class="tech-tag">MuJoCo</span>
-                        <span class="tech-tag">SLAM</span>
-                        <span class="tech-tag">WebSocket</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/hello-robot-stretch-simulation"
-                            class="card-link link-github" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6: RAG Amazon Review -->
-            <div class="project-card" data-category="ai" style="animation-delay: 0.5s;">
-                <div class="simulation-container">
-                    <canvas id="rag-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-ai">AI/ML</span>
-                    <h3 class="card-title">RAG Amazon Review System</h3>
-                    <p class="card-description">Retrieval-Augmented Generation system for Amazon product reviews with
-                        comprehensive benchmark evaluation.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">Vector DB</span>
-                        <span class="tech-tag">NLP</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/RAG-Amazon-Review" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6: Collision Simulation -->
-            <div class="project-card" data-category="simulation" style="animation-delay: 0.6s;">
-                <div class="simulation-container">
-                    <canvas id="collision-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-simulation">Simulation</span>
-                    <h3 class="card-title">Elastic Collision Simulation</h3>
-                    <p class="card-description">Physics-based simulation of elastic collisions between multiple disks
-                        with momentum conservation analysis.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">Physics</span>
-                        <span class="tech-tag">Dynamics</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Collision-Simulation" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 7: Machine Learning -->
-            <div class="project-card" data-category="ai" style="animation-delay: 0.7s;">
-                <div class="simulation-container">
-                    <canvas id="ml-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-ai">AI/ML</span>
-                    <h3 class="card-title">Machine Learning Projects</h3>
-                    <p class="card-description">Collection of ML coursework including classification, regression,
-                        clustering, and neural network implementations.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">scikit-learn</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Pandas</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Machine_Learning" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 8: Deep Learning -->
-            <div class="project-card" data-category="ai" style="animation-delay: 0.8s;">
-                <div class="simulation-container">
-                    <canvas id="dl-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-ai">AI/ML</span>
-                    <h3 class="card-title">Deep Learning Projects</h3>
-                    <p class="card-description">Advanced deep learning coursework including CNNs, RNNs, transformers,
-                        and computer vision applications.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Computer Vision</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Deep-Learning" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 9: Data Structures -->
-            <div class="project-card" data-category="ai" style="animation-delay: 0.9s;">
-                <div class="simulation-container">
-                    <canvas id="dsa-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-data">Data Science</span>
-                    <h3 class="card-title">Data Structures & Algorithms</h3>
-                    <p class="card-description">Comprehensive implementations of fundamental data structures and
-                        algorithms for computer science coursework.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Algorithms</span>
-                        <span class="tech-tag">DSA</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Data-Structures-and-Algorithms"
-                            class="card-link link-github" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 10: Robot Arm MATLAB -->
-            <div class="project-card" data-category="robotics" style="animation-delay: 1.0s;">
-                <div class="simulation-container">
-                    <canvas id="robot-arm-canvas" width="400" height="220" class="card-simulation"></canvas>
-                </div>
-                <div class="card-content">
-                    <span class="card-category cat-robotics">Robotics</span>
-                    <h3 class="card-title">Robot Arm Trajectory Planning</h3>
-                    <p class="card-description">MATLAB implementation of robot arm trajectory planning for straight line
-                        motion using inverse kinematics.</p>
-                    <div class="card-techs">
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">Kinematics</span>
-                        <span class="tech-tag">Robotics</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/mehmetkantar/Robot-Arm" class="card-link link-github"
-                            target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Robotic Software Engineer Intern</h4>
+                <div class="company">Beko Corporate & Koç University</div>
+                <div class="date">June 2025 – October 2025</div>
+                <ul>
+                    <li>Developed ROS2–MuJoCo integrated simulation for Hello Robot Stretch 3 with autonomous navigation
+                        and LiDAR-based SLAM</li>
+                    <li>Implemented SLAM Toolbox and Nav2 stack for real-time mapping, localization, and obstacle
+                        avoidance</li>
+                    <li>Engineered custom ROS2 bridge to synchronize LiDAR, odometry, and camera data for sensor fusion
+                    </li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h4>R&D Intern</h4>
+                <div class="company">Aselsan</div>
+                <div class="date">August 2024 – September 2024</div>
+                <ul>
+                    <li>Conducted comparative analysis of sensors in autonomous systems using ROS and Gazebo</li>
+                    <li>Implemented various sensors for mapping and data detection tasks</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h4>Co-Founder / COO</h4>
+                <div class="company">Leagle (AI Legal Tech Platform)</div>
+                <div class="date">2023 – 2025</div>
+                <ul>
+                    <li>Led customer acquisition strategies, increasing traffic and conversion rates</li>
+                    <li>Implemented AI-powered document interaction, achieving 30% improved efficiency</li>
+                    <li>Spearheaded automated workflows, increasing team productivity by 40%</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h4>Teaching Assistant & Research Student</h4>
+                <div class="company">Koç University</div>
+                <div class="date">2023 – Present</div>
+                <ul>
+                    <li>TA for Statics & Mechanics, Numerical Methods, and Machine Design courses</li>
+                    <li>Robotics research at RML focusing on simulation and human–robot interaction</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>🤖 Robotics & Simulation</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">ROS2</span>
+                    <span class="skill-tag">MuJoCo</span>
+                    <span class="skill-tag">Gazebo</span>
+                    <span class="skill-tag">SLAM</span>
+                    <span class="skill-tag">Nav2</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>💻 Programming</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>🔧 CAD & Analysis</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Siemens NX</span>
+                    <span class="skill-tag">SolidWorks</span>
+                    <span class="skill-tag">ANSYS</span>
+                    <span class="skill-tag">FEA</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>🧠 AI & Machine Learning</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">RAG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section id="projects">
+        <div class="categories">
+            <button class="category-btn active" data-filter="all">All Projects</button>
+            <button class="category-btn" data-filter="robotics">🤖 Robotics</button>
+            <button class="category-btn" data-filter="ai">🧠 AI/ML</button>
+            <button class="category-btn" data-filter="games">🎮 Games</button>
+            <button class="category-btn" data-filter="simulation">⚡ Simulation</button>
+        </div>
+
+        <!-- Projects -->
+        <div class="projects-container">
+            <div class="projects-grid">
+
+                <!-- Project 1: Robot Arm -->
+                <div class="project-card" data-category="robotics" style="animation-delay: 0.1s;">
+                    <div class="featured-badge">⭐ Featured</div>
+                    <img src="https://img.youtube.com/vi/iX-ZMjMz9j0/maxresdefault.jpg" alt="4-DoF Robot Arm"
+                        class="card-image" onerror="this.src='screenshots/Start_screen.png'">
+                    <div class="card-content">
+                        <span class="card-category cat-robotics">Robotics</span>
+                        <h3 class="card-title">Autonomous 4-DoF Robot Arm with Chassis</h3>
+                        <p class="card-description">Complete robotic system with inverse kinematics, computer vision, AI
+                            integration, and mobile chassis control via Raspberry Pi.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">PyQt5</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Autonomous-and-Teleoperated-4-DoF-Robot-Arm-with-chassis"
+                                class="card-link link-github" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://youtu.be/iX-ZMjMz9j0" class="card-link link-demo" target="_blank">
+                                ▶ Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Blockris -->
+                <div class="project-card" data-category="games" style="animation-delay: 0.2s;">
+                    <div class="featured-badge">🎮 Playable</div>
+                    <img src="screenshots/Game_screen.png" alt="Blockris Game" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category cat-games">Games</span>
+                        <h3 class="card-title">Blockris - Modern Block Puzzle</h3>
+                        <p class="card-description">Modern Tetris-style puzzle game with Firebase leaderboards, combo
+                            system, haptic feedback, and mobile app support.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Capacitor</span>
+                            <span class="tech-tag">Vite</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Blockris" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: roKUe Roguelike Game -->
+                <div class="project-card" data-category="games" style="animation-delay: 0.25s;">
+                    <div class="featured-badge">🎮 Team Project</div>
+                    <img src="screenshots/roKUe_MainMenu.jpg" alt="roKUe Game" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category cat-games">Games</span>
+                        <h3 class="card-title">roKUe - Rogue-Like Dungeon Game</h3>
+                        <p class="card-description">A roguelike dungeon crawler with procedural generation,
+                            enchantments,
+                            monsters, and item collection system. Built as a team project.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">Maven</span>
+                            <span class="tech-tag">OOP</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/abdullahyildirim209/roKUe-game" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: MCP Agent Benchmark -->
+                <div class="project-card" data-category="ai" style="animation-delay: 0.3s;">
+                    <div class="simulation-container">
+                        <canvas id="mcp-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-ai">AI/ML</span>
+                        <h3 class="card-title">MCP Agent Benchmark</h3>
+                        <p class="card-description">Production-grade AI web scraping tool with Firecrawl MCP,
+                            multi-model
+                            comparison, and Pydantic validation for enterprise use.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">OpenRouter</span>
+                            <span class="tech-tag">Pydantic</span>
+                            <span class="tech-tag">Firecrawl</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/mcp-agent-benchmark" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Hello Robot Stretch -->
+                <div class="project-card" data-category="robotics" style="animation-delay: 0.4s;">
+                    <img src="screenshots/hello_robot_architecture.png" alt="Hello Robot Stretch" class="card-image"
+                        style="object-fit: cover;">
+                    <div class="card-content">
+                        <span class="card-category cat-robotics">Robotics</span>
+                        <h3 class="card-title">Hello Robot Stretch Simulation</h3>
+                        <p class="card-description">Full simulation system with MuJoCo physics, ROS2 SLAM integration,
+                            and
+                            web-based teleoperation control.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">MuJoCo</span>
+                            <span class="tech-tag">SLAM</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/hello-robot-stretch-simulation"
+                                class="card-link link-github" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: RAG Amazon Review -->
+                <div class="project-card" data-category="ai" style="animation-delay: 0.5s;">
+                    <div class="simulation-container">
+                        <canvas id="rag-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-ai">AI/ML</span>
+                        <h3 class="card-title">RAG Amazon Review System</h3>
+                        <p class="card-description">Retrieval-Augmented Generation system for Amazon product reviews
+                            with
+                            comprehensive benchmark evaluation.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/RAG-Amazon-Review" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Collision Simulation -->
+                <div class="project-card" data-category="simulation" style="animation-delay: 0.6s;">
+                    <div class="simulation-container">
+                        <canvas id="collision-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-simulation">Simulation</span>
+                        <h3 class="card-title">Elastic Collision Simulation</h3>
+                        <p class="card-description">Physics-based simulation of elastic collisions between multiple
+                            disks
+                            with momentum conservation analysis.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Physics</span>
+                            <span class="tech-tag">Dynamics</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Collision-Simulation" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Machine Learning -->
+                <div class="project-card" data-category="ai" style="animation-delay: 0.7s;">
+                    <div class="simulation-container">
+                        <canvas id="ml-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-ai">AI/ML</span>
+                        <h3 class="card-title">Machine Learning Projects</h3>
+                        <p class="card-description">Collection of ML coursework including classification, regression,
+                            clustering, and neural network implementations.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Machine_Learning" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Deep Learning -->
+                <div class="project-card" data-category="ai" style="animation-delay: 0.8s;">
+                    <div class="simulation-container">
+                        <canvas id="dl-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-ai">AI/ML</span>
+                        <h3 class="card-title">Deep Learning Projects</h3>
+                        <p class="card-description">Advanced deep learning coursework including CNNs, RNNs,
+                            transformers,
+                            and computer vision applications.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Deep-Learning" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Data Structures -->
+                <div class="project-card" data-category="ai" style="animation-delay: 0.9s;">
+                    <div class="simulation-container">
+                        <canvas id="dsa-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-data">Data Science</span>
+                        <h3 class="card-title">Data Structures & Algorithms</h3>
+                        <p class="card-description">Comprehensive implementations of fundamental data structures and
+                            algorithms for computer science coursework.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">DSA</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Data-Structures-and-Algorithms"
+                                class="card-link link-github" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Robot Arm MATLAB -->
+                <div class="project-card" data-category="robotics" style="animation-delay: 1.0s;">
+                    <div class="simulation-container">
+                        <canvas id="robot-arm-canvas" width="400" height="220" class="card-simulation"></canvas>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cat-robotics">Robotics</span>
+                        <h3 class="card-title">Robot Arm Trajectory Planning</h3>
+                        <p class="card-description">MATLAB implementation of robot arm trajectory planning for straight
+                            line
+                            motion using inverse kinematics.</p>
+                        <div class="card-techs">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Kinematics</span>
+                            <span class="tech-tag">Robotics</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/mehmetkantar/Robot-Arm" class="card-link link-github"
+                                target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
